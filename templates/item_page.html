@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Item</title>
     <style>
         .menu {
@@ -24,7 +26,11 @@
 <main class="content">
 <h1> Страница товара </h1>
 Название: {{ item.name }} <br>
-Количество: {{ item.count }} <br>
+    {% if item.count %}
+        Количество: {{ item.count }} <br>
+    {% else %}
+        <p> Товара нет на складе!!! </p>
+    {% endif %}
 Брэнд: {{ item.brand }} <br>
 </main>
 </body>

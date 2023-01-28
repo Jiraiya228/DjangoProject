@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Home</title>
     <style>
         .menu {
@@ -26,6 +28,7 @@
 
 </main>
 <footer>
+    <img src="{% static 'img/VK.png' %}" alt="">
     (c)Мещерин А.Д. 2023г.
 </footer>
 </body>
