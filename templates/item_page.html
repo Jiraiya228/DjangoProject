@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+{% extends "base.html" %}
 {% load static %}
+{% block header %} Страница товара {% endblock header %}
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -32,6 +34,7 @@
         <p> Товара нет на складе!!! </p>
     {% endif %}
 Брэнд: {{ item.brand }} <br>
+    Описание: {{ item.descriptions }} <br>
 </main>
 </body>
 <footer>
